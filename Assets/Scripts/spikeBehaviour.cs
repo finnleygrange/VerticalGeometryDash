@@ -13,6 +13,14 @@ public class spikeBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("I like Boys");
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
